@@ -1,6 +1,6 @@
 # Jack Zwiebelson
 # UWYO COSC 1010
-# Submission Date
+# Submission date: 10/15/2024gi
 # Lab 06
 # Lab Section: 
 # Sources, people worked with, help given to: 
