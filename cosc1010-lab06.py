@@ -1,4 +1,4 @@
-# Your Name Here
+# Jack Zwiebelson
 # UWYO COSC 1010
 # Submission Date
 # Lab 06
@@ -66,6 +66,14 @@ print(len(random_string)) # Print out the size for reference
 
 # Above is a string with 2500 characters.
 # Create a program that goes through and counts the occurrence of each character, excluding \n using a  dictionary
+
+letters = {}
+for i in random_string:
+    if i in letters:
+        letters[i] += 1
+    else:
+        letters[i] = 1
+    
 # Output each letter and its corresponding occurrence in alphabetical order
 # Output which letter occurred the most 
 # Output which letter occurred the least 
@@ -85,11 +93,14 @@ print(len(random_string)) # Print out the size for reference
 
 # Output: each letter and its corresponding occurrence in alphabetical order
 
+for i in sorted(letters):
+    print(f"'{i}':{letters[i]}")
+
 print("*"*75)
 # Output which letter occurred the most 
 
-most_occurred = ""
-least_occurred = ""
+most_occurred = max(letters, key=letters.get)
+least_occurred = min(letters, key=letters.get)
 
 print(f"The letter that occurred the most is {most_occurred}")
 print("*"*75)
@@ -98,3 +109,6 @@ print(f"The letter that occurred the most is {least_occurred}")
 print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
+
+for i in sorted(letters):
+    print(f"'{i}':{((letters[i])/len(random_string)*100)}%")
